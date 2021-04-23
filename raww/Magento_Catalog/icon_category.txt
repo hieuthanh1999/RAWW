@@ -1,0 +1,12 @@
+<div class="icons-category">
+<a class="category-icons"><img src="{{media url=&quot;wysiwyg/icon1.png&quot;}}" alt="" />
+<h4 class="category-icons-name">Cleansers</h4></a>
+<a class="category-icons"><img src="{{media url=&quot;wysiwyg/icon2.png&quot;}}" alt="" />
+<h4 class="category-icons-name">Toners</h4></a>
+<a class="category-icons"><img src="{{media url=&quot;wysiwyg/icon3.png&quot;}}" alt="" />
+<h4 class="category-icons-name">Moisturisers</h4></a>
+<a class="category-icons"><img src="{{media url=&quot;wysiwyg/icon4.png&quot;}}" alt="" />
+<h4 class="category-icons-name">Serums</h4></a>
+<a class="category-icons"><img src="{{media url=&quot;wysiwyg/icon5.png&quot;}}" alt="" />
+<h4 class="category-icons-name">Body</h4></a>
+</div>

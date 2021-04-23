@@ -1,0 +1,316 @@
+& when (@media-common =true) {
+  body {
+    .lib-css(font-family, @font-family__avenir-roman);
+    .lib-css(font-size, @font-size-13);
+  }
+
+  //h1-h5, a
+  h1 {
+    .lib-css(font-family, @font-family__avenir-heavy);
+    .lib-css(font-size, @font-size-32);
+    .lib-css(line-height, @line-height-42);
+    .lib-css(letter-spacing, -0.25px);
+    .lib-css(color,@button__color-raw);
+  }
+
+  h2 {
+    .lib-css(font-family, @font-family__avenir-heavy);
+    .lib-css(font-size, @font-size-24);
+    .lib-css(line-height, @line-height-42);
+    .lib-css(letter-spacing, -0.25px);
+    .lib-css(color,@button__color-raw);
+  }
+
+  h3 {
+    .lib-css(font-family, @font-family__avenir-heavy);
+    .lib-css(font-size,@font-size-20);
+    .lib-css(line-height, @line-height-42);
+    .lib-css(letter-spacing, -0.25px);
+    .lib-css(color,@button__color-raw);
+  }
+
+  h4 {
+    .lib-css(font-family, @font-family__avenir-heavy);
+    .lib-css(font-size, @font-size-15);
+    .lib-css(line-height, @line-height-42);
+    .lib-css(letter-spacing, 0);
+    .lib-css(color,@button__color-raw);
+  }
+
+  h5 {
+    .lib-css(font-family, @font-family__avenir-black);
+    .lib-css(font-size, @font-size-14);
+    .lib-css(line-height, @line-height-42);
+    .lib-css(letter-spacing, 0.5px);
+    .lib-css(color,@button__color-raw);
+  }
+
+  a {
+    .lib-css(font-family, @font-family__avenir-roman);
+    .lib-css(line-height, @line-height-24);
+    .lib-css(font-size, @font-size-15);
+    .lib-css(color, @color-999);
+    .lib-css(cursor, pointer);
+    .lib-css(text-decoration, revert);
+    &:visited {
+      .lib-css(color, @color-999);
+    }
+    &:hover {
+      .lib-css(color, @color-999);
+    }
+  }
+  p {
+    .lib-css(font-family, @font-family__avenir-roman);
+    .lib-css(font-size, @font-size-15);
+    .lib-css(line-height, @line-height-24);
+    .lib-css(color,@color-322);
+  }
+
+  //button
+  button.hollow-button {
+    padding: 14px 43px;
+  }
+
+  // // input field
+  .adjust-button {
+    .lib-css(display, inline-block);
+    .lib-css(border, 2px solid #ededed);
+    .lib-css(padding, 8px 0px);
+    .add {
+      .lib-css(padding, 0px 10px 3px 10px);
+    }
+    .minus {
+      .lib-css(padding, 0px 10px 5px 10px);
+    }
+    button {
+      .lib-css( background, transparent);
+      .lib-css(border, none);
+      .lib-css(font-size;  @font-size-15);
+    }
+    input[type="number"] {
+      .lib-css(border, none);
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    .lib-css(max-width, 25%);
+  }
+  input {
+    &:focus {
+      color: #33281f;
+    }
+  }
+  .select {
+    .lib-css(color, @color-black);
+  }
+  input {
+    &:not([disabled]):focus {
+      .lib-css(box-shadow, none);
+    }
+    //input adjust
+    &.input-adjust {
+      //   .lib-css(padding-bottom, 5px);
+      .lib-css(max-width, 40px);
+      .lib-css(max-height, 40px);
+      .lib-css(text-align, center);
+      .lib-css(color, @color-black);
+    }
+
+    // input checkbox
+    &[type="checkbox"] {
+      .lib-css(visibility, hidden);
+      &:checked + label:before {
+        .lib-css(background, @color-white);
+        .lib-css(color, @button__color-raw);
+        .lib-css(content, "");
+        .lib-css(text-align, center);
+        .lib-css(font-size, @font-size-20);
+      }
+
+      &:checked + label:after {
+        .lib-css(content, "");
+        .lib-css(width, 5px);
+        .lib-css(height, 8px);
+        .lib-css(border-width, 0 2px 2px 0);
+        .lib-css(border-style, solid);
+        .lib-css(border-color, @color-black);
+        .lib-css(transform, rotate(45deg));
+        .lib-css(position, absolute);
+        .lib-css(left, 0);
+        .lib-css(margin, 4px 4px 4px 8px);
+      }
+
+      & + label:before {
+        .lib-css(border, 1px solid @color-ede);
+        .lib-css(content, "");
+        .lib-css(display, inline-block);
+        .lib-css(margin, 0 10px -6px 0);
+        .lib-css(padding, 0);
+        .lib-css(vertical-align, top);
+        .lib-css(width, 20px);
+        .lib-css(height, 20px);
+      }
+    }
+    &[type="radio"],
+    &[type="checkbox"] {
+      &:disabled + label:before {
+        .lib-css(background, @color-gray-light01);
+      }
+      &:checked + &:disabled + label:after {
+        .lib-css(background, @color-gray80);
+      }
+    }
+
+    //input radio
+    &[type="radio"] {
+      .lib-css(visibility, hidden);
+      &:checked + label:after {
+        .lib-css(background, @button__color-raw);
+        .lib-css(color, @color-white);
+        .lib-css(content, "");
+        .lib-css(text-align, center);
+        .lib-css(width, 8px);
+        .lib-css(height, 8px);
+        .lib-css(position, absolute);
+        .lib-css(left, 0);
+        .lib-css(margin, 8px);
+        .lib-css(border-radius, 50%);
+      }
+      & + label:before {
+        .lib-css(border-radius, 50%);
+        .lib-css(vertical-align, baseline);
+        .lib-css(border, 1px solid @color-ede);
+        .lib-css(content, "");
+        .lib-css(display, inline-block);
+        .lib-css(margin, 0 10px -6px 0);
+        .lib-css(padding, 0);
+        .lib-css(vertical-align, top);
+        .lib-css(width, 20px);
+        .lib-css(height, 20px);
+      }
+    }
+  }
+  label {
+    .lib-css(cursor, pointer);
+    .lib-css(position, relative);
+  }
+
+  //input text, select
+  input[type="number"] {
+    font-size: @font-size-15;
+    line-height: @line-height-20;
+    color: @button__color-raw;
+  }
+  input[type="text"],
+  select {
+    .lib-input-placeholder(@color-999);
+    .lib-css(border, 2px solid @color-ede);
+    .lib-css(height, 40px);
+    .lib-css(box-sizing, border-box);
+    .lib-css(font-size, @font-size-15);
+    .lib-css(line-height, @line-height-30);
+    .lib-css(font-family, @font-family__avenir-roman);
+    .lib-css(text-align, left);
+    .lib-css(padding, 0 13px);
+    .lib-css(margin, 10px 0);
+
+    &:not([disabled]):focus,
+    &:focus {
+      .lib-css(box-shadow, none);
+    }
+  }
+
+  select.mage-error,
+  textarea.mage-error {
+    .lib-css(border-color, @color-ede);
+  }
+  input.mage-error {
+    .lib-css(border-color, @color-red9);
+  }
+  div.mage-error {
+    .lib-css(color, @color-red9);
+  }
+
+  // alert
+  .message-success {
+    .lib-message(success);
+    .lib-css(width, 50%);
+    .lib-css(background, @color-white);
+    .lib-css(border, solid 2px @color-green-message);
+    .lib-css(text-align, center);
+    .lib-css(color, @color-green-message);
+  }
+  .message-error {
+    .lib-message(error);
+    .lib-css(width, 50%);
+    .lib-css(background, @color-white);
+    .lib-css(border, solid 2px @color-red-validate );
+    .lib-css(text-align, center);
+  }
+
+  //line awesome
+  .icon-facebook {
+    text-decoration: none;
+    &::after {
+      content: "\f39e";
+      font-family: @font-family__la;
+      font-size: @font-size-24;
+      color: @button__color-raw;
+    }
+  }
+  .icon-instagram {
+    text-decoration: none;
+    &::after {
+      content: "\f16d";
+      font-family: @font-family__la;
+      font-size: @font-size-28;
+      color: @button__color-raw;
+    }
+  }
+  .icon-facebook,
+  .icon-instagram {
+    &:hover {
+      color: @color-hover-icon;
+      text-decoration: none;
+    }
+  }
+  .category-icons {
+    text-align: center;
+    display: inline-block;
+    &-name {
+      text-transform: uppercase;
+    }
+  }
+}
+
+//-------------------min 768-----------------------
+.media-width(@extremum, @break)
+  when
+  (@extremum = "min")
+  and
+  (@break = @screen__m) {
+  .product.data.items > .item.title > .switch {
+    border: 2px solid @color-ede;
+    font-size: @font-size-14;
+    font-weight: @font-weight-800;
+    font-family: @font-family__avenir-black;
+    color: @color-9c9;
+    border-bottom: none;
+    line-height: @line-height-48;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: @color-white;
+  }
+  .active {
+    .data,
+    .switch {
+      color: @button__color-raw;
+    }
+  }
+  .product.data.items > .item.content {
+    border: 2px solid @color-ede;
+    margin-top: 44px;
+  }
+}

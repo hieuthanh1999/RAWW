@@ -1,0 +1,6 @@
+<div class="banner-category">
+<div class="banner-category-text">
+<h1 class="banner-category-text-title">Skincare</h1>
+<p class="banner-category-text-discription">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+</div>
+</div>

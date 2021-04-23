@@ -1,0 +1,68 @@
+<h2>Buttons</h2>
+<p><button class="action primary tobag" type="submit">Add to Bag</button> <button class="hollow-button" type="submit">Hollow</button></p>
+<div class="adjust-button"><button class="button-adjust minus" type="button">- </button> <input class="input-adjust" type="number" value="1"> <button class="button-adjust add" type="button">+</button></div>
+<div>
+<h2>Checkboxes &amp; Radio Buttons</h2>
+<p><input id="r1" checked="checked" name="r1" type="radio"><label for="r1">Selected</label></p>
+<p><input id="r2" name="r1" type="radio"><label for="r2">Not Selected</label></p>
+<p><input id="r3" checked="checked" disabled="disabled" name="r2" type="radio"><label for="r3">Selected, Disabled</label></p>
+<p><input id="r4" disabled="disabled" name="r2" type="radio"><label for="r4">Disabled</label></p>
+<p><input id="r5" checked="checked" name="" type="checkbox"><label for="r5">Ticked</label></p>
+<p><input id="r6" name="" type="checkbox"><label for="r6">Not Ticked</label></p>
+<p><input id="r7" checked="checked" disabled="disabled" name="" type="checkbox"><label for="r7">Ticked, Disabled</label></p>
+<p><input id="r8" disabled="disabled" name="" type="checkbox"><label for="r8">Disabled</label></p>
+<h2>Input Fields</h2>
+<div class="control"><select id="select" name="select">
+<option value="">Please select</option>
+<option value="1">Option One</option>
+<option value="2">Option Two</option>
+<option value="3">Option Three</option>
+<option value="4">Option Four</option>
+</select></div>
+<div><input class="mage-error" type="text" placeholder="email@li.com">
+<div class="mage-error">Please enter a valid email address</div>
+</div>
+<div><input class="input-text" type="text" placeholder="Text field"></div>
+</div>
+<h2>Tabs</h2>
+<div class="product data items" role="tablist">
+<div class="data item title active" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-controls="description" aria-selected="true" aria-expanded="true"><a id="tab-label-description-title" class="data switch" tabindex="-1" href="#description" data-toggle="trigger">Description</a></div>
+<div class="data item content" style="display: block;" role="tabpanel" aria-labelledby="tab-label-description" data-role="content" aria-hidden="false">
+<div class="product attribute description">
+<div class="value">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+</div>
+</div>
+</div>
+<div class="data item title" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-controls="additional" aria-selected="false" aria-expanded="false"><a class="data switch" tabindex="-1" href="#additional" data-toggle="trigger"> FAQ </a></div>
+<div class="data item title" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-selected="false" aria-expanded="false"><a class="data switch" tabindex="-1" href="#reviews" data-toggle="trigger"> How to</a></div>
+<div class="data item title" tabindex="0" role="tab" data-role="collapsible" data-collapsible="true" aria-selected="false" aria-expanded="false"><a class="data switch" tabindex="-1" href="#reviews" data-toggle="trigger"> Reviews</a></div>
+</div>
+<h2>Alerts</h2>
+<div class="message-success">
+<div>This is a success message</div>
+</div>
+<div class="message-error">
+<div>This is a error message</div>
+</div>
+<div>
+<h2>Typography</h2>
+<p>Avenir Roman - 15/24px</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+<p><a href="#">Text Link</a></p>
+<h1>h1 Avenir Heavy - 32px (-0.25 ls)</h1>
+<h2>h2 Avenir Heavy - 24px (-0.25 ls)</h2>
+<h3>h3 Avenir Heavy - 20px (-0.25 ls)</h3>
+<h4>h4 Avenir Heavy - 15px</h4>
+<h5>h5 Avenir Black - 14px (0.50 ls)</h5>
+</div>
+<div>
+<h2>Misc</h2>
+<a class="icon-facebook"></a>
+<a class="icon-instagram"></a>
+<a class="category-icons"><img src="{{media url="wysiwyg/1.png"}}" alt="">
+<h4 class="category-icons-name">Face</h4></a>
+</div>
