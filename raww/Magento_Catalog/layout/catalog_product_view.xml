@@ -15,7 +15,11 @@
         <referenceBlock name="product.info.description" remove="true"/>
         <move element="product.info.overview" destination="product.info.price" after="-"/>
         <!-- <referenceBlock name="reviews.tab" remove="true"/> -->
-        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="page.main.title" destination="product.info.main" before="product.info.price"/>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View" name="newproduct" template="Magento_Catalog::product/view/new_product.phtml" />
+        </referenceContainer>
+        <move element="newproduct" destination="product.info.main" before="-"/>
         <referenceBlock name="product.info.details">
                 <block class="Magento\Catalog\Block\Product\View" name="details" template="Magento_Catalog::product/view/details_tab.phtml" group="detailed_info">
                     <arguments>
@@ -23,13 +27,13 @@
                         <argument name="sort_order" xsi:type="string">1</argument>
                     </arguments>
                 </block>
-               <block class="Magento\Catalog\Block\Product\View" name="how  to" template="Magento_Catalog::product/view/how-to_tab.phtml" group="detailed_info">
+                <block class="Magento\Catalog\Block\Product\View" name="howto" template="Magento_Catalog::product/view/how-to_tab.phtml" group="detailed_info">
                     <arguments>
                         <argument name="title" translate="true" xsi:type="string">how to</argument>
                         <argument name="sort_order" xsi:type="string">2</argument>
                     </arguments>
-                </block>
-                <block class="Magento\Catalog\Block\Product\View" name="ingredients" template="Magento_Catalog::product/view/ingredients_tab.phtml" group="detailed_info">
+                </block> 
+                 <block class="Magento\Catalog\Block\Product\View" name="ingredients" template="Magento_Catalog::product/view/ingredients_tab.phtml" group="detailed_info">
                     <arguments>
                         <argument name="title" translate="true" xsi:type="string">ingredients</argument>
                         <argument name="sort_order" xsi:type="string">3</argument>
@@ -51,5 +55,6 @@
         </referenceContainer> 
         <referenceBlock name="related.product.addto.compare" remove="true"/>
         <referenceBlock name="related.product.addto.wishlist" remove="true"/>
+        
     </body>
 </page>

@@ -203,23 +203,13 @@ $_item = null;
                                    class="product photo product-item-photo">
                                     <?= $block->getImage($_item, $image)->toHtml() ?>
                                 </a>
+                                
 
-                                <?php
-                               
-                               $class_more="more-color";
-                               $size = $_item->getResource()->getAttribute('more_color');
-                               
-                                   $size  = $size ->getFrontend()->getValue($_item);
-                                //    if($more_sicolor){
-                                //        echo "tontai";
-                                //    }
-                                //    else{
-                                //        echo "khong";
-                                //    }
-                                //echo $size;
-                                   echo "<div class=$class_more>" . $size . "</div>";
-                                   
-                           ?>
+                                <?php if ($_item->isAvailable()) :?>
+                            <?=$block->getProductDetailsHtml($_item) ?>
+                        <?php endif; ?>
+
+
                                 <div class="product details product-item-details">
                               
                                     <strong class="product name product-item-name"><a
@@ -268,7 +258,7 @@ $_item = null;
                                                         style="width:50px;"
                                                         maxlength="12"
                                                         value="<?php /* @escapeNotVerified */ echo $block->getProductDefaultQty() * 1 ?>"
-                                                        title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty"
+                                                        title="<?php /* @escapeNotVerified */ echo __('') ?>" class="input-text qty"
                                                         data-validate="<?php echo $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
                                                         />
 
@@ -283,7 +273,7 @@ $_item = null;
                                                     <?php if (!$_item->getTypeInstance()->isPossibleBuyFromList($_item)):?>
                                                         <button
                                                             class="action tocart primary"
-                                                            data-mage-init='{"redirectUrl": {"url": "<?= $block->escapeUrl($block->getAddToCartUrl($_item)) ?>"}}' type="button" title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>">
+                                                            data-mage-init='{"redirectUrl": {"url": "<?= $block->escapeUrl($block->getAddToCartUrl($_item)) ?>"}}' type="button" title="<?= $block->escapeHtmlAttr(__('Add to Bag')) ?>">
                                                         <span><?= $block->escapeHtml(__('Add to Bag')) ?></span>
                                                         </button>
                                                     <?php else :?>
