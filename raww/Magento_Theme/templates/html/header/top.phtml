@@ -1,0 +1,17 @@
+<div class="header left">
+    <?php 
+        echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('raww-header_top-ship')
+        ->toHtml()
+    ?>
+</div>
+
+<div class="header center">
+    <?php
+        echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('raww-header_top-center')
+        ->toHtml()
+    ?>
+</div>

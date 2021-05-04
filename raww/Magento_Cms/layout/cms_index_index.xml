@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="banner_top" template="Magento_Cms::test.phtml" before="main.content"/>
+            <!-- <referenceContainer name="content">
+                <block class="Magento\Framework\View\Element\Template" name="new_sellers" template="Magento_Cms::new_sellers.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="new_arrivals" template="Magento_Cms::new_arrivals.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="section_outdoor" template="Magento_Cms::outdoor_inspiration.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="banner_tiles" template="Magento_Cms::banner_tiles.phtml" before="-"/>
+                <block class="Magento\Framework\View\Element\Template" name="furniture_blog" template="Magento_Cms::furniture_blog.phtml" after="section_outdoor"/>
+                <block class="Magento\Framework\View\Element\Template" name="testimonial_blog" template="Magento_Cms::testimonial_blog.phtml" />
+            </referenceContainer>
+             -->
+        </referenceContainer>
+    </body>
+</page>

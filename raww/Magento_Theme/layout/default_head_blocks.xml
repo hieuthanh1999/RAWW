@@ -1,0 +1,12 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- <css src="../web/css/line-awesome/line-awesome.min.css" /> -->
+        <css src="https://use.fontawesome.com/releases/v5.7.1/css/all.css" src_type="url"/>
+        <css src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" src_type="url" rel="stylesheet" type="text/css" />
+        <css src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" src_type="url" rel="stylesheet" type="text/css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" src_type="url"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" src_type="url"/>
+
+    </head>
+</page>

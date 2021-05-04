@@ -1,0 +1,24 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<small class="copyright page-main">
+    <div class="copyright__text">
+        <?php 
+            echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('raww-footer_copyright-text')
+            ->toHtml()
+        ?>
+    </div>
+    <div  class="copyright__logo">
+        <?php 
+            echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('raww-footer_copyright-logo')
+            ->toHtml()
+        ?>
+    </div>
+</small>
