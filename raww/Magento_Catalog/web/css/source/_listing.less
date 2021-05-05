@@ -1,47 +1,4 @@
 & when(@media-common = true){
-    // .toolbar.toolbar-products {
-    //     position: unset;
-    //     display: flex;
-    //     width: auto;
-    //     float: right;
-    //     .modes {
-    //         display: none;
-    //         overflow: hidden;
-    //     }
-    //     .toolbar-sorter.sorter {
-    //         .action.sorter-action.sort-asc::before {
-    //             display: none;
-    //         }
-    //         select.sorter-options {
-    //             background-color: @color-white;
-    //             padding: 2px 33px 2px 12px;
-    //             font-size: 15px;
-    //             line-height: 24px;
-    //             height: 40px;
-    //             margin-top: -5px;
-    //             &:not([disabled]):focus,
-    //             &:focus {
-    //                 .lib-css(box-shadow, none);
-    //             }
-    //         }
-    //         select.sorter-options option:checked {
-    //             background-color: @color-gray-light0;
-    //         }
-    //     }
-    //     .toolbar-amount {
-    //         float: right;
-    //         font-size: 14px;
-    //         line-height: 24px;
-    //         position: relative;
-    //         &:after {
-    //             content: ' ';
-    //             width: 1px;
-    //             background-color: @color-gray-darken0;
-    //             height: 25px;
-    //             position: absolute;
-    //         }
-    //     }
-    // }
     .swatch-attribute.color {
         .swatch-attribute-options{
             display: inline-block;
@@ -113,7 +70,7 @@
     }
     //category icon
     .icons-category{
-        border-bottom: 1px solid @color-gray80;
+        border-bottom: 1px solid @border__color-icon-category;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -272,11 +229,12 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     //none list
     .modes {
+        overflow: hidden;
         display: none;
     }    
   
     .page-layout-1column.page-with-filter .column.main {
-        padding-top: 22px;
+        padding-top: 0;
     }
     .page-layout-1column
     {
@@ -294,6 +252,7 @@
             margin-bottom: 0;
         }
         .toolbar-products {
+            position: unset;
             width: 25%;
             display: inline-block;
             margin: 0;
@@ -330,7 +289,7 @@
         padding: 0;
         width: 32%;
         &:nth-child(4n+1){
-            margin-right: 10px;
+           // margin-right: 10px;
             .product-item-name{
                 margin: 4px 0px 0 4px;
                 a{
@@ -339,7 +298,8 @@
             }
         }
         &:nth-child(4n+2){
-            margin: -5px 0px 0 14px;
+            
+           // margin: -5px 0px 0 14px;
             .product-item-name{
                 margin: 9px 0px 0 4px;
                 a{
@@ -348,7 +308,7 @@
             }
         }
         &:nth-child(4n+3){
-            margin: -4px 0px 0 24px;
+            //margin: -4px 0px 0 24px;
             .product-item-name{
                 margin: 8px 0px 0 1px;
             }

@@ -91,12 +91,23 @@
       .lib-css(border, none);
     }
   }
-
-  input,
-  select,
-  textarea {
-    .lib-css(max-width, 50%);
-  }
+  .control.select {
+    .lib-css(max-width, 380px);
+    input[type="text"], select {
+        &:not([disabled]):focus,
+        &:focus {
+            .lib-css(box-shadow, none);
+        }
+    }
+    select option:checked {
+        background-color: @color-gray-light0;
+    }
+}
+  // input,
+  // select,
+  // textarea {
+  //   .lib-css(max-width, 30%);
+  // }
   input {
     &:focus {
       color: #33281f;
@@ -314,4 +325,5 @@
     border: 2px solid @color-ede;
     margin-top: 44px;
   }
+
 }
