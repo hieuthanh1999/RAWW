@@ -73,14 +73,15 @@
 
   // // input field
   .adjust-button {
+    margin: 1px 0 0 4px;
     .lib-css(display, inline-block);
-    .lib-css(border, 2px solid #ededed);
+    .lib-css(border, 2px solid @color-ede);
     .lib-css(padding, 8px 0px);
     .add {
       .lib-css(padding, 0px 10px 3px 10px);
     }
     .minus {
-      .lib-css(padding, 0px 10px 5px 10px);
+      .lib-css(padding, 0px 10px 5px 5px);
     }
     button {
       .lib-css( background, transparent);
@@ -218,13 +219,13 @@
   select {
     .lib-input-placeholder(@color-999);
     .lib-css(border, 2px solid @color-ede);
-    .lib-css(height, 40px);
+    .lib-css(height, 37px);
     .lib-css(box-sizing, border-box);
     .lib-css(font-size, @font-size-15);
     .lib-css(line-height, @line-height-30);
     .lib-css(font-family, @font-family__avenir-roman);
     .lib-css(text-align, left);
-    .lib-css(padding, 0 13px);
+    .lib-css(padding, 0 23px 0 8px);
     .lib-css(margin, 10px 0);
 
     &:not([disabled]):focus,
@@ -291,7 +292,7 @@
     text-align: center;
     display: inline-block;
     &-name {
-      margin-top: -5px;
+      margin-top: -6px;
       text-transform: uppercase;
     }
   }
