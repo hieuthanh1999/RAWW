@@ -61,7 +61,7 @@
         position: relative;
         &::after{
             content: '';
-            background-color: #eee;
+            background-color: @border__color-icon-category;
             position: absolute;
         }
     }
@@ -121,7 +121,7 @@
         text-align: center;
         .price{
             letter-spacing: 1.8px;
-            color: #30241c;
+            color: @color-3024;
             font-family: @font-family__avenir-heavy;
         }
         .price-label {
@@ -129,8 +129,8 @@
         }
     }
     .action.primary {
-        line-height: 20px;
-        color: #ffffff;
+        line-height: @line-height-20;
+        color: @color-white;
         font-family: @font-family__avenir-heavy;
         letter-spacing: 0.1px;
     }
@@ -138,16 +138,16 @@
     .product-new{
         z-index: 11;
         position: absolute;
-        background: #222;
+        background: @color-222;
         text-transform: uppercase;
-        line-height: 16px;
-        color: #ffffff;
-        font-weight: 800;
+        line-height: @line-height-16;
+        color: @color-white;
+        font-weight: @font-weight-800;
         font-family: @font-family__avenir-black;
     }
     .product-item-name a{
-        line-height: 28px;
-        color: #30241c;
+        line-height: @line-height-28;
+        color: @color-3024;
         font-family: @font-family__avenir-roman;
     }
    
@@ -181,7 +181,7 @@
                 box-shadow: unset;
             }
             &.selected {
-                border: 3px solid blue;
+                border: 3px solid @color-blue1;
                 box-shadow: unset;
                 margin-bottom: 44px;
                 transition: 0.5s;
@@ -189,7 +189,7 @@
             }
             &:hover {
                 border: 3px solid @color-white;
-                box-shadow: 0 0 3px blue;
+                box-shadow: 0 0 3px @color-blue1;
                 margin-bottom: 44px;
                 transition: 0.5s;
             }
@@ -200,23 +200,23 @@
     }
 }
     .swatch-option-tooltip { 
-        border: 1px solid #e8d5d2;
+        border: 1px solid @color-e8d;
         padding: 0 5px;
         max-width: 140px;
         max-height: 100%;
         min-height: 20px;
         min-width: 20px;
         text-align: center;
-        background: #fff;
+        background: @color-white;
         .title {
-            font-size: 12px;
-            line-height: 24px;
+            font-size: @font-size-12;
+            line-height: @line-height-24;
         }
         .corner {
             transform: rotate(180deg);
             top: 0;
             &:after, &:before {
-                border-color: #e8d5d2 transparent transparent transparent;
+                border-color: @color-e8d transparent transparent transparent;
             }
             &::before{
                 left: 14px;
@@ -282,7 +282,7 @@
 
     .banner-category{
         height: 540px;
-        .banner-category(26%, 8%, 18px, 100px, 80px, 47%, 18px, 31px);
+        .banner-category(26%, 8%, 18px, @font-size-100, @line-height-80, 47%, @font-size-18, @line-height-28);
     }
     
     //
@@ -351,7 +351,7 @@
 
     .banner-category{
         height: 360px;
-        .banner-category(22%, 4%, 18px, 100px, 80px, 60%, 18px, 31px);
+        .banner-category(22%, 4%, 18px, @font-size-100, @line-height-80, 60%, @font-size-18, @line-height-28);
     }
     
     //
@@ -424,7 +424,7 @@
     .product-item .price-box {
         margin: 0px 0 10px 4px;
         .price{
-            font-size: 18px;
+            font-size: @font-size-18;
         }
     }
     .product-item .tocart {
@@ -436,16 +436,16 @@
         padding-top: 14px;
     }
     .action.primary {
-        font-size: 15px;
+        font-size: @font-size-15;
     }
     .product-new{
         left: 43.7%;
         top: -10px;
         padding: 7px 12px; 
-        font-size: 12px;
+        font-size: @font-size-12;
     }
     .product-item-name a{
-        font-size: 16px;
+        font-size: @font-size-16;
     }
    
 }
@@ -457,7 +457,7 @@
 
     .banner-category{
         height: 360px;
-        .banner-category(22%, 4%, 18px, 100px, 80px, 75%, 18px, 31px);
+        .banner-category(22%, 4%, 18px, @font-size-100, @line-height-80, 75%, @font-size-18, @line-height-28);
     }
     
     //
@@ -545,7 +545,7 @@
     .product-item .price-box {
         margin: 6px 0;
         .price{
-            font-size: 15px;
+            font-size: @font-size-15;
         }
     }
     .product-item .tocart {
@@ -557,18 +557,18 @@
         padding-top: 14px;
     }
     .action.primary {
-        font-size: 15px;
+        font-size: @font-size-15;
     }
     .product-new{
         left: 42%;
         top: -10px;
         padding: 7px 12px; 
-        font-size: 12px;
+        font-size: @font-size-12;
     }
     .product-item-name{
         margin: 0 10px;
         a{
-            font-size: 16px;
+            font-size: @font-size-16;
         }
     } 
 }
@@ -580,7 +580,7 @@
 
     .banner-category{
         height: 360px;
-        .banner-category(22%, 4%, 18px, 100px, 80px, 75%, 18px, 31px);
+        .banner-category(22%, 4%, 18px, @font-size-100, @line-height-80, 75%, @font-size-18, @line-height-28);
     }
    
     //
@@ -637,7 +637,7 @@
     .product-item .price-box {
         margin: 6px 0;
         .price{
-            font-size: 15px;
+            font-size: 1@font-size-15;
         }
     }
     .product-item .tocart {
@@ -655,12 +655,12 @@
         left: 40.7%;
         top: -10px;
         padding: 7px 12px; 
-        font-size: 12px;
+        font-size: @font-size-12;
     }
     .product-item-name{
         margin: 0 40px;
         a{
-            font-size: 16px;
+            font-size: @font-size-16;
         }
     } 
     
@@ -680,7 +680,7 @@
 
     .banner-category{
         height: 340px;
-        .banner-category(46%, 4%, 5px, 54px, 80px, 80%, 16px, 22px);
+        .banner-category(46%, 4%, 5px, @font-size-54, @line-height-80, 80%, @font-size-16, @line-height-28);
     }
    
     //
@@ -695,8 +695,8 @@
                 max-height: 50px;
             }
             &-name{
-                font-size: 12px;
-                line-height: 15px;
+                font-size: @font-size-12;
+                line-height: @line-height-15;
             }
             &:last-child, &:first-child{
                 display: none;
@@ -729,7 +729,7 @@
     .product-item .price-box {
         margin: 6px 0;
         .price{
-            font-size: 14px;
+            font-size: @font-size-14;
         }
     }
     .product-item .tocart {
@@ -741,7 +741,7 @@
         padding-top: 10px;
     }
     .action.primary {
-        font-size: 15px;
+        font-size: @font-size-15;
     }
     .product-new{
         left: 38%;
@@ -752,7 +752,7 @@
     .product-item-name{
            margin: 0 10px;
         a{
-            font-size: 14px;
+            font-size: @font-size-14;
         }
     } 
 }
