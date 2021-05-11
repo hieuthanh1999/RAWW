@@ -78,10 +78,12 @@
     .lib-css(border, 2px solid @color-ede);
     .lib-css(padding, 8px 0px);
     .add {
-      .lib-css(padding, 0px 10px 3px 10px);
+      .lib-css(margin, -5px -2px 0 -10px);
+      .lib-css(font-size, 24px);
     }
     .minus {
-      .lib-css(padding, 0px 10px 5px 5px);
+      .lib-css(margin, -9px -3px 0 0px);
+      .lib-css(font-size, 29px);
     }
     button {
       .lib-css( background, transparent);
@@ -90,7 +92,8 @@
     }
     input[type="number"] {
       .lib-css(border, none);
-    }
+      .lib-css(padding, 0);
+      .lib-css(margin, -1px 2px 0px 0px);    }
   }
   .control.select {
     .lib-css(max-width, 380px);
@@ -124,7 +127,7 @@
     //input adjust
     &.input-adjust {
       //   .lib-css(padding-bottom, 5px);
-      .lib-css(max-width, 40px);
+      .lib-css(max-width, 20px);
       .lib-css(max-height, 40px);
       .lib-css(text-align, center);
       .lib-css(color, @color-black);
@@ -225,7 +228,7 @@
     .lib-css(line-height, @line-height-30);
     .lib-css(font-family, @font-family__avenir-roman);
     .lib-css(text-align, left);
-    .lib-css(padding, 0 23px 0 8px);
+    .lib-css(padding, 0 28px 0 12px);
     .lib-css(margin, 10px 0);
 
     &:not([disabled]):focus,
