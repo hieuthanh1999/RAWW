@@ -13,8 +13,6 @@
 
     //  Newsletter subscription
     .block.newsletter {
-        margin-bottom: 20px;
-
         .form.subscribe {
             display: table;
             width: 100%;
@@ -49,10 +47,10 @@
 
         input {
             border-radius: 3px;
-            margin-right: 35px;
-            padding: 0 0 0 35px; // Reset some default Safari padding values.
+            margin: 0;
             .lib-input-placeholder(@color-newsletter-text);
             max-width: 100%;
+            border: none;
         }
 
         .title {
@@ -84,21 +82,20 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .block.newsletter {
+        margin-bottom: 20px;
         max-width: 44%;
         width: max-content;
-        padding: 3% 5.5% 0;
+        padding: 17px 35px 1px;
         max-width: 100%;
         width: unset;
         .field {
             margin-right: 10px;
         }
         input {
-            padding: 24px 0 24px 19px;
+            padding: 23px 0 26px 19px;
             font-size: 16px;
             line-height: 20px;
             letter-spacing: -0.35px;
-            margin: 0;
-            background-clip: unset;
         }
         .action.subscribe {
             border-radius: 3px;
@@ -117,14 +114,10 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .block {
         &.newsletter {
-            padding-bottom: 40px;
-            margin: 0;
             input {
                 padding: 24px 20px 26px;
-                border: unset;
                 font-size: 15px;
                 letter-spacing: 0.15px;
-                margin: 0;
             }
 
             .field {

@@ -1,0 +1,15 @@
+<div class="tile">
+    <?php 
+        echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('raww-tile-background')
+        ->toHtml()
+    ?>
+    <div class="tile-inner">
+        <?php for ($i = 1; $i <= 3; $i++) : ?>
+        <a class="tile-item" href="#">
+            <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId("raww-tile-$i")->toHtml(); ?>
+        </a>
+        <?php endfor; ?>
+    </div>
+</div>

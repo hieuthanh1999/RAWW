@@ -7,17 +7,25 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <!-- <move element="form.subscribe" destination="footer.top.content.cms" after="-" /> -->
         <referenceContainer name="page.wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="banner_top" template="Magento_Cms::test.phtml" before="main.content"/>
-            <!-- <referenceContainer name="content">
-                <block class="Magento\Framework\View\Element\Template" name="new_sellers" template="Magento_Cms::new_sellers.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="new_arrivals" template="Magento_Cms::new_arrivals.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="section_outdoor" template="Magento_Cms::outdoor_inspiration.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="banner_tiles" template="Magento_Cms::banner_tiles.phtml" before="-"/>
-                <block class="Magento\Framework\View\Element\Template" name="furniture_blog" template="Magento_Cms::furniture_blog.phtml" after="section_outdoor"/>
-                <block class="Magento\Framework\View\Element\Template" name="testimonial_blog" template="Magento_Cms::testimonial_blog.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="banner_top" template="Magento_Cms::banner.phtml" before="main.content"/>
+            <referenceContainer name="content">
+                <block class="Magento\Framework\View\Element\Template" name="tile" template="Magento_Cms::tile.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="superfood" template="Magento_Cms::superfood.phtml" after="tile" />
+                <block class="Magento\Framework\View\Element\Template" name="best_seller" template="Magento_Cms::best_seller.phtml" after="superfood" />
+                <block class="Magento\Framework\View\Element\Template" name="shop_instagram" template="Magento_Cms::shop_instagram.phtml" after="best_seller" />
+                <!-- <block class="Magento\Framework\View\Element\Template" name="test_1" template="Magento_Cms::test.phtml" after="shop_instagram" /> -->
+                <!-- <container name="footer.top.cms" label="Footer Top" htmlTag="div" htmlClass="footer-top cms" after="shop_instagram">
+                    <block class="Magento\Framework\View\Element\Template" name="footer.top.image.cms" template="Magento_Cms::footer/top_image.phtml" />
+                    <container name="footer.top.content.cms" label="Footer Top Content" htmlTag="div" htmlClass="footer-top__content cms" after="footer.top.image.cms">
+                        <block class="Magento\Framework\View\Element\Template" name="footer.top.text" template="Magento_Cms::footer/top_text.phtml" />
+                    </container>
+                </container> -->
+                <!-- <block class="Magento\Framework\View\Element\Template" name="furniture_blog" template="Magento_Cms::furniture_blog.phtml" after="section_outdoor"/>
+                <block class="Magento\Framework\View\Element\Template" name="testimonial_blog" template="Magento_Cms::testimonial_blog.phtml" /> -->
             </referenceContainer>
-             -->
+            
         </referenceContainer>
     </body>
 </page>

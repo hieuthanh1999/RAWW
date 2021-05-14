@@ -54,32 +54,9 @@
                     <block class="Magento\Framework\View\Element\Template" name="footer.middle.block" template="Magento_Theme::footer/middle.phtml" />
                 </container>
             </container>
-            <container name="footer.bottom" label="Footer Nav" htmlTag="div" htmlClass="footer-nav page-main" after="footer.middle">
+            <container name="footer.bottom" label="Footer Nav" htmlTag="div" htmlClass="footer-nav page-main-copy" after="footer.middle">
                 <block class="Magento\Framework\View\Element\Template" name="footer.nav.block" template="Magento_Theme::footer/nav.phtml" />
             </container>
-            
-            <!-- <referenceContainer name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
-                <referenceBlock class="Magento\Store\Block\Switcher" name="store_switcher" remove="true" />
-                <referenceBlock class="Magento\Framework\View\Element\Html\Links" name="footer_links" remove="true" />
-                <block class="Magento\Framework\View\Element\Template" name="footer.nav" template="Magento_Theme::footer/nav.phtml" />
-                <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
-                <referenceBlock class="Magento\Framework\View\Element\Template" name="report.bugs" remove="true" />
-            </referenceContainer> -->
-            
-            <!-- <container name="footer.top" label="Footer Top" htmlTag="div" htmlClass="footer top" after="footer.banner">
-                <container htmlTag="div" htmlClass="inner footer-top page-main">
-                    <block class="Magento\Framework\View\Element\Template" name="footer.top.block" template="Magento_Theme::footer/footer-top.phtml" />
-                </container>
-            </container>
-            <referenceContainer name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
-                <referenceBlock class="Magento\Store\Block\Switcher" name="store_switcher" remove="true" />
-                <referenceBlock class="Magento\Framework\View\Element\Html\Links" name="footer_links" remove="true" />
-                <block class="Magento\Framework\View\Element\Template" name="footer.middle" template="Magento_Theme::footer/footer-middle.phtml" />
-                <block class="Magento\Framework\View\Element\Template" name="footer.middle.mobile" template="Magento_Theme::footer/footer-middle-mobile.phtml" />
-                <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
-                <referenceBlock class="Magento\Framework\View\Element\Template" name="report.bugs" remove="true" />
-            </referenceContainer> -->
         </referenceContainer>
-           
     </body>
 </page>

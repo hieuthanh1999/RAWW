@@ -102,6 +102,29 @@
 //  _____________________________________________
 
 & when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: @screen__xl) {
+        .nav-sections {
+            margin: 1px 0 0;  
+        }
+        .navigation ul {
+            padding: 0;
+            .level0 {
+                margin: 0;
+                padding: 0 6px;
+                &:first-child {
+                    margin-left: -4px;
+                }
+            }
+        }
+        .header.bottom.inner ul li {
+            &:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:last-child {
+                padding: 7px;
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
     @media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
         .page-header .header.panel {
             padding: 7px 10px 9px;
@@ -170,29 +193,6 @@
             }
             &:nth-child(4) {
                 order: 3;
-            }
-        }
-    }
-}
-
-& when (@media-target = 'desktop'), (@media-target = 'all') {
-    @media only screen and (min-width: @screen__m) and (max-width: @screen__xl) {
-        .nav-sections {
-            margin: 1px 0 0;  
-        }
-        .navigation ul {
-            padding: 0;
-            .level0 {
-                margin: 0;
-                padding: 0 6px;
-                &:first-child {
-                    margin-left: -4px;
-                }
-            }
-        }
-        .header.bottom.inner ul li {
-            &:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:last-child {
-                padding: 7px;
             }
         }
     }

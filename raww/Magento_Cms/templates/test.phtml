@@ -1,15 +1,4 @@
-<div class="thing" id="wrapper">
-    <div><img alt="slider image" src="https://i.postimg.cc/fbppLHvf/1.jpg"></div>
-    <div><img alt="slider image" src="https://i.postimg.cc/Vk5KCqvG/2.jpg"></div>
-    <div><img alt="slider image" src="https://i.postimg.cc/QtDg01Nr/3.jpg"></div>
-</div>
-<script>
-        $(document).ready(function(){
-            $('.thing').slick({
-                dots: true,
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 2000
-            }) 
-        });
-</script>
+
+<?php
+echo $controllerName = $this->getRequest()->getControllerName();
+?>

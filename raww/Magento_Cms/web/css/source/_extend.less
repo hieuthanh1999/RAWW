@@ -1,53 +1,500 @@
-#wrapper {
-	width: 1170px;
-	margin: 0 auto;
+@font-size-64: 64px;
+@font-size-39: 39px;
+@font-size-54: 54px;
+@line-height-44: 44px;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    body.cms-index-index .page-wrapper .page-main {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    // Banner Slider Css
+    .banner {
+        &-slider {
+            line-height: 0;
+        }
+
+        &-slider__inner {
+            position: relative;
+            img {
+                width: 100%;
+            }
+        }
+        &-content {
+            position: absolute;
+        }
+        
+    }
+
+    .banner-slider__text {
+        color: @color-white;
+        span {
+            display: block;
+        }
+        .text {
+            &-big {
+                font-family: @font-family-name__markerfield;
+            }
+        }
+    }
+
+    .banner-slider__button {
+        a {
+            border: none;
+            font-size: @font-size-16;
+            line-height: @line-height-20;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 3px;
+            padding: 16px 0px 14px;
+            display: block; 
+            letter-spacing: 0.25px;
+            font-family: @font-family-name__avenir-roman;
+        }
+        &:hover a {
+            border: none;
+        }
+    }
+
+    // Superfood Css
+    .superfood {
+        &-inner {
+            // width: 100%;
+            margin: 0 auto;
+            max-width: 1140px;
+        }
+        span {
+            display: block;
+            color: @button__color-raw;
+            text-align: center;
+        }
+        h3 {
+            font-weight: unset;
+            text-align: center;
+        }
+        ul li {
+            display: inline-block;
+        }
+        ul {
+            margin: 0;
+            text-align: center;
+            display: flex;
+        }
+        .category-icons {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+                img {
+                    .itemRotate(1s);
+                }
+            }
+        }
+        &-icon h5 {
+            line-height: 15px;
+            margin: 11px auto 0;
+            max-width: 85px;
+        }
+        &-button {
+            text-align: center;
+            a {
+                border: none;
+            }
+        }
+    }
+
+    // Best Seller Css
+    .best-seller {
+        line-height: 0;
+        img {
+            width: 100%;
+        }
+    }
+
+    // Shop Instagram Css
+    .shop-instagram {
+        &.page-main-copy {
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+                &::after {
+                    font-family: "FontAwesome";
+                    content: "\f16d";
+                    vertical-align: middle;
+                    padding-left: 5px;
+                }
+        }
+        &-main {
+            display: flex;
+            flex-wrap: wrap;
+            .item {
+                line-height: 0;
+                // text-align: center;
+                &:hover img {
+                    .hover-action(1.015);
+                    overflow: hidden;
+                }
+            }
+        }
+        &-button {
+            text-align: center;
+        }
+    }
 }
-img {
-	width: 100%;
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    // Banner Slider Css
+    .banner {
+        &-desktop {
+            display: none;
+        }
+        &-mobile {
+            display: block;
+        }
+        &-content {
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            transform: translate(-53%, 0%);
+        }
+        &-slider__text .text-big {
+            font-size: @font-size-54;
+            letter-spacing: -1.5px;
+            line-height: @line-height-44;
+            margin-bottom: 22px;
+        }
+        &-slider__button a {
+            width: 60%;
+        }
+    }
+
+    // Tile Css
+    .tile {
+        display: none;
+    }
+
+    // Superfood Css
+    .superfood {
+        &-inner {
+            padding: 0 10px 40px;
+            span {
+                font-size: @font-size-24;
+                line-height: @line-height-28;
+                font-weight: 600 ;
+                width: 75%;
+                margin-left: 37px;
+                padding-top: 36px;
+            }
+            h3 {
+                font-size: @font-size-16;
+                line-height: @line-height-24;
+                margin: 17px 5px 26px;
+                letter-spacing: 0.1px;
+            }
+        }
+        &-icon {
+            .first-row {
+                flex-wrap: wrap;
+                padding: 0 6px 2px;
+                justify-content: space-between;
+                li:last-child, li:nth-child(7) {
+                    display: none;
+                }
+            }
+            .second-row {
+                display: none;
+            }
+        }
+        li {
+            margin-bottom: 23px;
+            width: unset;
+        }
+        .category-icons {
+            width: 93%;
+        }
+        &-button .action.primary {
+            width: 100%;
+        }
+    }
+
+    // Best Seller Css
+    .best-seller {
+        margin-bottom: 1px;
+        .bs-desktop {
+            display: none;
+        }
+        .bs-mobile {
+            display: block;
+        }
+    }
+
+    // Shop Instagram
+    .shop-instagram {
+        h1 {
+            font-size: @font-size-24;
+            line-height: @line-height-30;
+            font-weight: 600;
+            margin: 37px auto 7px;
+        }
+        p {
+            font-size: @font-size-16;
+            line-height: @line-height-24;
+            width: 85%;
+            margin: 0 auto;
+        }
+        &-main {
+            padding: 23px 5px 7px;
+            justify-content: space-between;
+        }
+        &-main .item {
+            width: 47.3%;
+            text-align: center;
+            padding: 0 4.8px 11px;
+            &.mobile, &.mobile.tablet {
+                display: none;
+            }
+        }
+        &-button .action.primary {
+            width: 95%;
+        }
+    }
+
+    .columns .column.main {
+        padding-bottom: 20px;
+    }
 }
-.logo {
-	width: 20%;
-	float: left;
+
+@media screen and (max-width: @screen__m) and (min-width: 381px) {
+    .superfood {
+        &-icon {
+            .first-row {
+                li:last-child, li:nth-child(7) {
+                    display: block;
+                }
+            }
+        }
+        li {
+            width: 25%;
+        }
+    }
 }
-.menu-item {
-	width: 75%;
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__380) {
+    .shop-instagram-main .item {
+        width: 45%;
+    }
 }
-.menu-item ul {
-	float: right;
-	list-style: none;
+
+//
+//  Tablet
+//  _____________________________________________
+
+
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: @screen__xl) {
+        // Banner Css
+        .banner-content {
+            width: 45%;
+            transform: translate(-35%, -40%);
+            .text-small {
+                padding: 10px 0;
+            }
+        }
+
+        // Shop Instagram Css
+        .shop-instagram {
+            &-main {
+                justify-content: center;
+                .item {
+                    width: 24%;
+                }
+                .item.mobile.tablet {
+                    display: none;
+                }
+            }
+        }
+
+
+    }
 }
-.menu-area {
-	overflow: hidden;
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
+        // Banner Css
+        .banner-content {
+            width: 60%;
+            .big-text {
+                font-size: @font-size-84;
+            }
+        }
+        // Shop Instagram Css
+        .shop-instagram {
+            &-main {
+                justify-content: center;
+                .item {
+                    width: 30%;
+                }
+            }
+        }
+
+        // Superfood Css
+        .superfood .category-icons {
+            max-width: 80px;
+        }
+    }
 }
-.menu-area ul li {
-	display: inline-block;
-}
-.menu-area ul li a {
-	display: inline-block;
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #000;
-}
-@media (max-width: 767px) {
-	#wrapper {
-		width: 100%;
-	}
-	.logo {
-		float: none;
-		width: 100%;
-		text-align: center;
-	}
-	.menu-item {
-		width: 100%;
-		text-align: center;
-	}
-	.menu-item ul {
-		float: none;
-		padding: 0;
-	}
-	.menu-area ul li a {
-		padding: 5px;
-		font-size: 11px;
-	}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    // Banner Slider Css
+    .banner {
+        &-mobile {
+            display: none;
+        }
+
+        &-content {
+            width: 30%;
+            top: 45%;
+            left: 25%;
+            transform: translate(-45.75%, -53.25%);
+        }
+    }
+
+    .banner-slider__text {
+        .text {
+            &-big {
+                font-size: @font-size-100;
+                letter-spacing: -3px;
+                line-height: @line-height-80;
+            }
+            &-small {
+                font-size: @font-size-18;
+                line-height: @line-height-28;
+                padding: 30px 50px 25px 0;
+            }
+        }
+    }
+    .banner-slider__button a {
+        width: 37.5%;
+    }
+
+    // Tile Css
+    .tile {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 100%;
+        }
+        &-inner {
+            position: absolute;
+            top: 50.35%;
+            justify-content: center;
+            display: flex;
+            transform: translateY(-50%);
+        }
+        &-item {
+            position: relative;
+            margin: 0 -6.5px;
+            span {
+                position: absolute;
+                bottom: 11%;
+                left: 13%;
+                font-size: @font-size-64;
+                letter-spacing: -1.5px;
+                line-height: @line-height-74;
+                color: @color-white;
+                font-family: @font-family-name__markerfield;
+            }
+        }
+        &-item:hover {
+            .hover-action(1.015);
+            overflow: hidden;
+        }
+    }
+
+    // Superfood Css
+    .superfood {
+        &-inner {
+            padding: 0 15px 99px;
+        }
+        span {
+            font-weight: 600;
+            font-size: @font-size-39;
+            line-height: @line-height-48;
+            padding-top: 95px;
+            letter-spacing: 1.25px;
+            margin: 0 auto;
+            width: 60%;
+        }
+        h3 {
+            width: 85%;
+            margin: 33px auto;
+            line-height: @font-size-28;
+            letter-spacing: 0.055px;
+        }
+        &-icon {
+            padding: 12px 0 17px;
+            ul {
+                padding: 7px 14px;
+            }
+            li {
+                width: calc(100%/8);
+            }
+        }
+        &-button .action.primary {
+            padding: 15px 31px 14px 30px;
+            letter-spacing: 0.25px;
+        }
+    }
+
+    // Best Seller Css
+    .best-seller {
+        .bs-mobile {
+            display: none;
+        }
+    }
+
+    // Shop Instagram Css
+    .shop-instagram {
+        h1 {
+            font-weight: 600;
+            margin: 92px 3px 5px 0px;
+            letter-spacing: -0.3px;
+        }
+        p {
+            font-size: @font-size-18;
+            line-height: @font-size-28;
+            letter-spacing: -0.01px;
+        }
+        &-main {
+            .item {
+                // padding: 14px 5px 5px 15px;
+                padding: 14px 0 5px 20px;
+           }
+        }
+        &-button {
+            padding: 14px 0 20px;
+            .action.primary {
+                padding: 14px 32px;
+            }
+        }
+    }
+
 }
