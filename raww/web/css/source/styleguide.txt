@@ -64,5 +64,5 @@
 <a class="icon-facebook"></a>
 <a class="icon-instagram"></a>
 <a class="category-icons"><img src="{{media url="wysiwyg/1.png"}}" alt="">
-<h4 class="category-icons-name">Face</h4></a>
+<h5 class="category-icons-name">Face</h5></a>
 </div>
