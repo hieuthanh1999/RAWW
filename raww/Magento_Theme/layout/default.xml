@@ -54,14 +54,9 @@
                     <block class="Magento\Framework\View\Element\Template" name="footer.middle.block" template="Magento_Theme::footer/middle.phtml" />
                 </container>
             </container>
-            <container name="footer.bottom" label="Footer Nav" htmlTag="div" htmlClass="footer-nav page-main-copy" after="footer.middle">
+            <container name="footer.bottom" label="Footer Nav" htmlTag="div" htmlClass="footer-nav page-main" after="footer.middle">
                 <block class="Magento\Framework\View\Element\Template" name="footer.nav.block" template="Magento_Theme::footer/nav.phtml" />
             </container>
-        </referenceContainer>
-        
-        <referenceContainer name="before.body.end">
-            <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="Magento_Theme::html/absolute_footer.phtml" />
-              <block class="Magento\Framework\View\Element\Template" name="category_button" before="-" template="Magento_Theme::category_button.phtml" />
         </referenceContainer>
     </body>
 </page>

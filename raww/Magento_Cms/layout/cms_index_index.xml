@@ -15,15 +15,6 @@
                 <block class="Magento\Framework\View\Element\Template" name="superfood" template="Magento_Cms::superfood.phtml" after="tile" />
                 <block class="Magento\Framework\View\Element\Template" name="best_seller" template="Magento_Cms::best_seller.phtml" after="superfood" />
                 <block class="Magento\Framework\View\Element\Template" name="shop_instagram" template="Magento_Cms::shop_instagram.phtml" after="best_seller" />
-                <!-- <block class="Magento\Framework\View\Element\Template" name="test_1" template="Magento_Cms::test.phtml" after="shop_instagram" /> -->
-                <!-- <container name="footer.top.cms" label="Footer Top" htmlTag="div" htmlClass="footer-top cms" after="shop_instagram">
-                    <block class="Magento\Framework\View\Element\Template" name="footer.top.image.cms" template="Magento_Cms::footer/top_image.phtml" />
-                    <container name="footer.top.content.cms" label="Footer Top Content" htmlTag="div" htmlClass="footer-top__content cms" after="footer.top.image.cms">
-                        <block class="Magento\Framework\View\Element\Template" name="footer.top.text" template="Magento_Cms::footer/top_text.phtml" />
-                    </container>
-                </container> -->
-                <!-- <block class="Magento\Framework\View\Element\Template" name="furniture_blog" template="Magento_Cms::furniture_blog.phtml" after="section_outdoor"/>
-                <block class="Magento\Framework\View\Element\Template" name="testimonial_blog" template="Magento_Cms::testimonial_blog.phtml" /> -->
             </referenceContainer>
             
         </referenceContainer>
