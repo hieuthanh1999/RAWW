@@ -38,13 +38,14 @@
         float: left;
     }
 }
+
 //
 //  Desktop Tablet
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
         .filter.block {
-            width: 60%;
+            width: 65%;
             .block-content.filter-content {
                 display: inline-block;
                 .filter-options-item {
@@ -222,6 +223,7 @@
 //
 //  Mobile
 //  _____________________________________________
+
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
     .filter.block {
         .active {

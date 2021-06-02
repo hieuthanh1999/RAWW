@@ -7,60 +7,7 @@
 -->
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="logo">
-            <arguments>
-                <argument name="logo_file" xsi:type="string">images/raww_logo.png</argument>
-                <argument name="logo_width" xsi:type="number">200</argument>
-                <argument name="logo_height" xsi:type="number">86</argument>
-                <argument name="logo_alt" xsi:type="string">Raww Logo</argument>
-            </arguments>
-        </referenceBlock>
-
-        <referenceBlock name="header" remove="true" />
-        <referenceBlock name="register-link" remove="true" />
-        <referenceBlock name="my-account-link" remove="true" />
-        <referenceContainer name="footer" remove="true" />
-        <move element="form.subscribe" destination="footer.top.content" after="-" />
-
-        <referenceContainer name="header.container">
-            <referenceContainer name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header">
-                <block class="Magento\Framework\View\Element\Template" name="header-top" before="-" template="Magento_Theme::html/header/top.phtml" />
-                <block class="Magento\Framework\View\Element\Template" name="header-top-mobile" after="-" template="Magento_Theme::html/header/top_mobile.phtml" />
-            </referenceContainer>
-
-            <referenceContainer name="header-wrapper" label="Page Header" htmlTag="div" htmlClass="header content">
-                <block class="Magento\Framework\View\Element\Template" name="header-content-icon" after="minicart" template="Magento_Theme::html/header/content.phtml" />
-            </referenceContainer>
-        </referenceContainer>
-        <referenceContainer name="page.top">
-            <container name="header-bottom" label="USP Messages" htmlTag="div" htmlClass="header bottom" >
-                <block class="Magento\Framework\View\Element\Template" name="usp-messages" template="Magento_Theme::html/header/bottom.phtml" />
-            </container>
-        </referenceContainer>
-        
-
-        <referenceContainer name="footer-container">
-            <container name="footer.top.middle" label="Footer Top Middle" htmlTag="div" htmlClass="footer-top-middle" before="-">
-                
-                <container name="footer.top" label="Footer Top" htmlTag="div" htmlClass="footer-top" before="-">
-                    <block class="Magento\Framework\View\Element\Template" name="footer.top.image" template="Magento_Theme::footer/top_image.phtml" />
-                    <container name="footer.top.content" label="Footer Top Content" htmlTag="div" htmlClass="footer-top__content" after="footer.top.image">
-                        <block class="Magento\Framework\View\Element\Template" name="footer.top.text" template="Magento_Theme::footer/top_text.phtml" />
-                    </container>
-                </container>
-
-
-                <container name="footer.middle" label="Footer Middle" htmlTag="div" htmlClass="footer-middle" after="footer.top">
-                    <block class="Magento\Framework\View\Element\Template" name="footer.middle.block" template="Magento_Theme::footer/middle.phtml" />
-                </container>
-            </container>
-            <container name="footer.bottom" label="Footer Nav" htmlTag="div" htmlClass="footer-nav page-main-copy" after="footer.middle">
-                <block class="Magento\Framework\View\Element\Template" name="footer.nav.block" template="Magento_Theme::footer/nav.phtml" />
-            </container>
-        </referenceContainer>
-        
         <referenceContainer name="before.body.end">
-            <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="Magento_Theme::html/absolute_footer.phtml" />
               <block class="Magento\Framework\View\Element\Template" name="category_button" before="-" template="Magento_Theme::category_button.phtml" />
         </referenceContainer>
     </body>

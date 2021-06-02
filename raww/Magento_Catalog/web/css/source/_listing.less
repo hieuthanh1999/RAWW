@@ -246,7 +246,7 @@
     //  _____________________________________________
 
     .banner-category{
-        .banner-category(19.1%, 11.3%, 18px, 100px, 80px, 31%, 18px, 31px);
+        .banner-category(17%, 11.3%, 18px, 100px, 80px, 31%, 18px, 31px);
     }
     
     //
@@ -521,6 +521,14 @@
 }
 
 
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l)  {
+    .icons-category{
+        .category-icons{
+            padding: 100px 10px 12px 10px;
+          
+        }
+    }
+    }
 
 //
 //  Mobile
@@ -589,8 +597,8 @@
 
     .icons-category{
         .category-icons{
-            padding: 51px 10px 12px 10px;
-           
+            padding: 30px 10px 12px 10px;
+          
         }
     }
    
@@ -680,7 +688,7 @@
 
     .banner-category{
         height: 340px;
-        .banner-category(46%, 4%, 5px, @font-size-54, @line-height-80, 80%, @font-size-16, @line-height-28);
+        .banner-category(38%, 4%, 5px, @font-size-54, @line-height-80, 80%, @font-size-16, @line-height-28);
     }
    
     //
@@ -689,12 +697,13 @@
 
     .icons-category{
         .category-icons{
-            padding: 51px 18px 12px 18px;
+            padding: 30px 15px 12px 15px;
             img{
                 max-width: 50px;
                 max-height: 50px;
             }
             &-name{
+                margin-top: 5px;
                 font-size: @font-size-12;
                 line-height: @line-height-15;
             }
