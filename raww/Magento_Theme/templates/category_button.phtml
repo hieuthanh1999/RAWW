@@ -1,0 +1,22 @@
+<script>
+require([
+'jquery'
+], function ($) {
+    $(function () { // to ensure that code evaluates on page load
+    $(".minus").on("click", function(){
+        var qty = $(this).closest("div.adjust-button").find("input");
+        var value = Number(qty.val());
+            if(value > 1) {
+                value = value - 1;
+            }
+        qty.attr('value', value);
+    })
+    $(".add").click(function(){
+        var qty = $(this).closest("div.adjust-button").find("input");
+        var value = Number(qty.val());
+        value = value + 1;
+            qty.attr('value', value);
+        })
+    });
+});
+</script>

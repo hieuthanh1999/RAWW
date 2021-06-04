@@ -58,5 +58,8 @@
                 <block class="Magento\Framework\View\Element\Template" name="footer.nav.block" template="Magento_Theme::footer/nav.phtml" />
             </container>
         </referenceContainer>
+        <referenceContainer name="before.body.end">
+              <block class="Magento\Framework\View\Element\Template" name="category_button" before="-" template="Magento_Theme::category_button.phtml" />
+        </referenceContainer>
     </body>
 </page>
