@@ -125,7 +125,7 @@
         p {
             text-align: center;
                 &::after {
-                    font-family: "FontAwesome";
+                    font-family: @font-family__fa;
                     content: "\f16d";
                     vertical-align: middle;
                     padding-left: 5px;
@@ -136,7 +136,6 @@
             flex-wrap: wrap;
             .item {
                 line-height: 0;
-                // text-align: center;
                 &:hover img {
                     .hover-action(1.015);
                     overflow: hidden;
@@ -484,7 +483,6 @@
         }
         &-main {
             .item {
-                // padding: 14px 5px 5px 15px;
                 padding: 14px 0 5px 20px;
            }
         }
@@ -495,5 +493,4 @@
             }
         }
     }
-
 }

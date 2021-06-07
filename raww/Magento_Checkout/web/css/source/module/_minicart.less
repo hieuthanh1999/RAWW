@@ -178,9 +178,8 @@
                 white-space: nowrap;
                 position: relative;
                 &::before {
-                    font-family: "Font Awesome 5 Free";
+                    font-family: @font-family__fa;
                     content: "\f290";
-                    font-weight: 600;
                     font-size: 28px;
                     color: @color-black;
                 }
@@ -188,10 +187,7 @@
                 .text {
                     &:extend(.abs-visually-hidden all);
                 }
-                // .action.showcart.active:before
                 .counter.qty {
-                    // .lib-css(background, @active__color);
-                    // .lib-css(color, @page__background-color);
                     .lib-css(background, @minicart-qty__bg);
                     .lib-css(color, @color-white);
                     .lib-css(height, @minicart-qty__height);
@@ -221,11 +217,6 @@
                         }
                     }
                 }
-
-                .counter-number {
-                    // color: @color-fff;
-                }
-
                 .counter-label {
                     &:extend(.abs-visually-hidden all);
                 }
