@@ -63,10 +63,15 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
               
               <?php
                       
-                    //   $product_new = $_product->getResource()->getAttribute('product_new');
-                    //   $product_new   = $product_new->getFrontend()->getValue($_product);
-                    //   $class = isset($product_new)?"product-new":"product_null";
-                    //   echo "<div class=$class>" . $product_new . "</div>";
+                      $product_new = $_product->getResource()->getAttribute('product_new');
+                      $product_new = $product_new->getFrontend()->getValue($_product);
+                      $class ="product-new";
+                      if($product_new)
+                      {
+                       
+                        echo "<div class=$class>" . $product_new . "</div>";
+                      }
+                     
                       ?>
 
                     </a>
